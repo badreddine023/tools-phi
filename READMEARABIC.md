@@ -1,6 +1,6 @@
 # Φ-Chain: البلوكشين الكوني – حيث يلتقي الرياضيات باللامركزية  
 
-![Golden Spiral](https://via.placeholder.com/800x200/FFD700/000000?text=Φ-Chain:+The+Natural+Law+of+Value) <!-- غيّر بصورة spiral حقيقية -->  
+![Golden Spiral](https://upload.wikimedia.org/wikipedia/commons/2/2c/Fibonacci_spiral_987_610.png)  
 
 > "الكون لا يعمل بقوانين تعسّفية، بل بقوانين كونية. Φ-Chain ليس مجرّد بلوكشين، بل تعبير عن النسبة الذهبية (φ ≈ 1.618) ومتتالية فيبوناتشي – حيث كل بلوك ينمو عضويًا، وكل حالة زمنية قابلة للعكس دون فقدان."  
 > – بدردين باها، المهندس المعماري  
@@ -17,17 +17,51 @@
 ### الحل:  
 - **FBA (Fibonacci Byzantine Agreement)**: يختار proposers بنسبة stake ∝ φ، مما يضمن نموًا عضويًا وأمانًا أعلى (610 توقيعات للـ finality، F_15).  
 - **Reversible Core**: يدعم bidirectional Fibonacci (F(-n) = (-1)^{n+1} * F(n)) للعودة الزمنية الكاملة، مع quantum loop consensus لاستعادة الحالات دون خسائر.  
-هذا يحل مشاكل الـ scalability والأمان، مستوحى من أبحاث مثل [Fibonacci Group Consensus Algorithm](https://www.mdpi.com/2079-9292/12/17/3592) [[3]](grok://citation?card_id=90940e&card_type=citation_card&type=render_inline_citation&citation_id=3)، اللي يقلل العقد في الإجماع بنسب فيبو.  
+هذا يحل مشاكل الـ scalability والأمان، مستوحى من أبحاث مثل [Fibonacci Group Consensus Algorithm](https://www.mdpi.com/2079-9292/12/17/3592)، اللي يقلل العقد في الإجماع بنسب فيبو.  
 
 ## 🧮 الهيكل الرياضي: القوانين الكونية في الكود  
 كل معاملة في Φ-Chain مشتقّة من φ وF_n:  
 - **Slot Duration**: F_6 = 8 ثوانٍ (معدل "تنفّس" الشبكة).  
 - **Q-Matrix**:  
-  $$ Q = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} $$  
-  حيث S_{n+1} = Q · S_n، لنمو exponential يعتمد على eigenvalues φ و1-φ.  
+  [ Q = \begin{pmatrix} 1 & 1 \ 1 & 0 \end{pmatrix} ]GROK_BLOCK_LATEX_TEMP
+حيث S_{n+1} = Q · S_n، لنمو exponential يعتمد على eigenvalues φ و1-φ.  
 - **الأمان**: Zeckendorf representation للـ over-collateralization، وtetrahedral pruning (6³ = 216) للـ state decay.  
 
-مستوحى من أبحاث مثل [PHICOIN: Proof of Work High-Performance Infrastructure](https://arxiv.org/pdf/2412.17979) [[1]](grok://citation?card_id=42bc1b&card_type=citation_card&type=render_inline_citation&citation_id=1)، اللي يستخدم Phihash للـ mining العادل، و[Lightweight Blockchain with Fibonacci](https://aimspress.com/article/doi/10.3934/mbe.2022556?viewType=HTML) [[0]](grok://citation?card_id=425e81&card_type=citation_card&type=render_inline_citation&citation_id=0) للـ decision schemes في الشبكات الخفيفة. (ملاحظة: PHICOIN مختلف في الإجماع، بس يشارك الـ φ في الأساس).  
+مستوحى من أبحاث مثل [PHICOIN: Proof of Work High-Performance Infrastructure](https://arxiv.org/pdf/2412.17979)، اللي يستخدم Phihash للـ mining العادل، و[Lightweight Blockchain with Fibonacci](https://aimspress.com/article/doi/10.3934/mbe.2022556?viewType=HTML) للـ decision schemes في الشبكات الخفيفة.  
 
 ## 🚀 دليل البدء السريع  
 1. **كلون الريبو**:  
+$$       git clone https://github.com/badreddine023/phi-chain.git cd phi-chain
+2. تثبيت التبعيات:
+pip install numpy
+3. شغّل النموذج الأولي:
+python phi_chain_prototype.py  # للإجماع FBA python reversible_phi_core.py  # للعكس الزمني
+4. شغّل المحاكي:
+python phi_chain_simulator.py  # شاهد الـ spiral ينمو!
+5. بناء عقدة: اقرأ setup.py وشغّل python setup.py install.
+## 💡 حالات الاستخدام: الزمن العكسي في العالم الحقيقي  
+- **السجلات الطبية**: عكّس الحالة لاستعادة "ما إذا كان الدواء مُعطى" دون forks – مثال: blockchain للـ EHRs غير قابل للتزييف.  
+- **سلاسل التوريد العكسية**: تتبّع المنتج من المستهلك إلى المصدر (F(-n)) للكشف عن التزييف فورًا.  
+- **DeFi Reversible**: استرداد loans فاشلة دون liquidation، مع ZK-proofs للخصوصية.  
+- **Gaming & NFTs**: حالات "undo" في الألعاب اللامركزية، مستوحاة من quantum superposition hashing.  
+
+## 📈 الـ Roadmap  
+| Phase | Status | الوصف |  
+|-------|--------|--------|  
+| Phase 0-4 | ✅ Completed | Foundation + Reversible Core |  
+| Phase 5 | 📋 In Progress | Fibonacci Merkle Trees |  
+| Phase 6-8 | 📋 Upcoming | Sharding + Mainnet (1,597 validators, F_11) |  
+
+## 🤝 كيف تساهم؟  
+اقرأ [CONTRIBUTING.md](CONTRIBUTING.md) – كل commit يجب أن يحترم "φ Oath": "أقسم بأن كودي غير تعسّفي". افتح issues أو PRs!  
+
+## 📜 الرخصة  
+MIT License – حريّة كاملة، مع الحفاظ على الـ φ.  
+
+[اقرأ الـ Whitepaper الكامل](WHITEPAPER.md) | [الموقع](index.html) | [المناقشات](https://github.com/badreddine023/phi-chain/discussions)  
+
+"Everything is a fibo." – انضم للثورة الكونية. 🚀  
+#ΦChain #FibonacciBlockchain  
+
+© 2025 Badreddine Baha – Visionary Architect  
+```  
