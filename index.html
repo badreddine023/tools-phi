@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Φ-Chain Portal - Universal Blockchain Applications</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skeleton-loader.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='90' fill='%23b9a369'>Φ</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -639,7 +640,47 @@
         }
     </style>
 </head>
-<body>
+<body class="skeleton-loading">
+    <div id="skeleton-container">
+        <div class="skeleton-header">
+            <div class="skeleton-logo skeleton-shimmer"></div>
+            <div class="nav-links">
+                <div class="skeleton-cta skeleton-shimmer" style="width: 80px; height: 20px;"></div>
+                <div class="skeleton-cta skeleton-shimmer" style="width: 80px; height: 20px;"></div>
+                <div class="skeleton-cta skeleton-shimmer" style="width: 80px; height: 20px;"></div>
+            </div>
+        </div>
+        <div class="skeleton-hero">
+            <div class="skeleton-hero-title skeleton-shimmer"></div>
+            <div class="skeleton-hero-subtitle skeleton-shimmer"></div>
+            <div class="cta-buttons">
+                <div class="skeleton-cta skeleton-shimmer"></div>
+                <div class="skeleton-cta skeleton-shimmer"></div>
+            </div>
+        </div>
+        <div class="skeleton-chart-container">
+            <div class="skeleton-card-title skeleton-shimmer" style="width: 300px; margin: 0 auto 1rem;"></div>
+            <div class="skeleton-chart skeleton-shimmer"></div>
+        </div>
+        <div class="skeleton-grid">
+            <div class="skeleton-card">
+                <div class="skeleton-card-icon skeleton-shimmer"></div>
+                <div class="skeleton-card-title skeleton-shimmer"></div>
+                <div class="skeleton-card-text skeleton-shimmer"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-card-icon skeleton-shimmer"></div>
+                <div class="skeleton-card-title skeleton-shimmer"></div>
+                <div class="skeleton-card-text skeleton-shimmer"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-card-icon skeleton-shimmer"></div>
+                <div class="skeleton-card-title skeleton-shimmer"></div>
+                <div class="skeleton-card-text skeleton-shimmer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="realApp">
     <div class="hero-background">
         <div class="phi-particles" id="phiParticles"></div>
     </div>
@@ -941,6 +982,7 @@
         </div>
     </footer>
 
+    </div> <!-- Close #realApp -->
     <script>
         // Web3 Integration
         let web3 = null;
@@ -1240,6 +1282,12 @@
             setTimeout(() => {
                 document.querySelector('.hero-content h1').style.animation = 'hero-glow 4s ease-in-out infinite alternate';
             }, 500);
+
+            // Remove skeleton loading screen after initial content is loaded and scripts are run
+            if (window.removeSkeleton) {
+                // Wait a small moment to ensure initial rendering is complete
+                setTimeout(window.removeSkeleton, 1000); 
+            }
         });
 
         // Add performance optimizations
@@ -1257,7 +1305,31 @@
                 preloadLink.href = link;
                 document.head.appendChild(preloadLink);
             });
+
+            // Lazy load images (if any were present, this is a good practice)
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                img.src = img.getAttribute('data-src');
+                img.removeAttribute('data-src');
+            });
         });
+
+        // Remove skeleton loading screen after content is ready
+        function removeSkeleton() {
+            const body = document.body;
+            const skeleton = document.getElementById('skeleton-container');
+            
+            // Add fade-out class to skeleton
+            skeleton.classList.add('skeleton-fade-out');
+            
+            // Wait for fade-out animation to complete, then remove elements and class
+            setTimeout(() => {
+                body.classList.remove('skeleton-loading');
+                skeleton.remove();
+            }, 500); // Matches the 0.5s duration in skeleton-loader.css
+        }
+
+        // Expose to global scope for script.js to call
+        window.removeSkeleton = removeSkeleton;
     </script>
 </body>
 </html>
