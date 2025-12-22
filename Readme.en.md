@@ -8,6 +8,15 @@
 
 Φ-Chain is a revolutionary Layer-1 blockchain powered by **full temporal symmetry** (Reversible Core) and **Fibonacci Byzantine Agreement (FBA)**, designed to be entirely non-arbitrary. Imagine a chain that can "rewind" without forks, or selects validators based on natural Fibonacci laws—not randomness.  
 
+## 🚀 Wallet and Mining Application Features
+
+The front-end application provides the following functionalities:
+
+*   **Secure Wallet Creation (New!):** Easily generate a new, non-custodial wallet with a unique 12-word mnemonic phrase and private key.
+*   **Wallet Connection:** Connect seamlessly with existing wallets such as MetaMask, Phantom, and WalletConnect.
+*   **Asset Management:** View your Φ token balance, staked sΦ tokens, and transaction history.
+*   **PoC Mining Interface:** Interface for starting and monitoring the Proof-of-Coherence mining process.
+
 ## 🚨 The Problem & Solution: Why Φ-Chain?  
 ### The Problem:  
 Consensus like Ethereum's Proof-of-Stake relies on random choices (VDFs or RANDAO), leading to:  

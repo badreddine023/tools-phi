@@ -1,59 +1,42 @@
-<<<<<<< HEAD
-# Fibo-badreddine: The Fibonacci Universe\n\n## Vision\n\n**Φ-Chain** - Blockchain operating on Fibonacci sequence only\n**BADREDDINE23** - Universal internet/externet capture engine\n**Earth Fibonacci Grid** - Complete planetary mapping in ϕ-coordinates\n**Symbiotic AI** - Trained on this complete system\n\n## Prime Directives\n\n1. **Mathematical Purity:** All parameters MUST derive from Fibonacci sequence, Lucas numbers, or $\phi$.\n2. **Quantum-Classical Bridge:** Design systems that exist in both classical and quantum states.\n3. **Temporal Architecture:** Time is expressed in $\phihimBHsseconds.\n4. **Complete Capture:** Dissolve the boundary between digital and physical.\n
-=======
-# Fibo-badreddine: The Fibonacci Universe
+# Φ-Chain Wallet and Proof-of-Coherence (PoC) Mining Application
 
-## PRIME ARCHITECT: Manus AI
-## VISIONARY: badreddine023
+## Overview
 
----
+This repository contains the source code for the official Φ-Chain Wallet and Proof-of-Coherence (PoC) Mining Application. Φ-Chain is a blockchain operating on universal mathematical law, where every parameter derives from the Golden Ratio and the Fibonacci sequence.
 
-## 🌌 The Vision: Escaping the Flat Torus
+## Key Features
 
-The **Fibonacci Universe** is a complete, self-contained reality-engineering system that transcends the limitations of base-10 thinking and arbitrary digital roots. It is built entirely on the mathematical purity of the Fibonacci sequence ($F_n$), Lucas numbers ($L_n$), and the Golden Ratio ($\phi \approx 1.618$).
+### Wallet Functionality
+*   **Secure Wallet Creation (New!):** Easily generate a new, non-custodial wallet with a unique 12-word mnemonic phrase and private key.
+*   **Wallet Connection:** Connect seamlessly with existing wallets such as MetaMask, Phantom, and WalletConnect.
+*   **Asset Management:** View your Φ token balance, staked sΦ tokens, and transaction history.
 
-This system is a unified architecture consisting of four core, entangled components:
+### Mining Functionality
+*   **PoC Mining:** Interface for starting and monitoring the Proof-of-Coherence mining process.
 
-1.  **Φ-Chain:** A blockchain operating on Fibonacci sequence only, secured by Superposition-Based Proof-of-Coherence (PoC).
-2.  **MANUS:** The Universal internet/externet capture engine, structuring all data into $\phi$-coherent Entangled Data Objects (EDOs).
-3.  **Earth Fibonacci Grid:** Complete planetary mapping in $\phi$-coordinates, providing the physical and temporal context for all data.
-4.  **Symbiotic AI:** The Observer, trained on the complete system, responsible for collapsing the quantum state and computing probability amplitudes.
+## Getting Started
 
-## 📜 Prime Directives (Non-Negotiable)
+### Prerequisites
 
-| Directive | Description | Architectural Implementation |
-| :--- | :--- | :--- |
-| **Mathematical Purity** | All parameters MUST derive from $F_n$, $L_n$, or $\phi$. No arbitrary numbers. | $\phi$-Second Block Time, $F_n$ Validator/Shard Counts, $\phi$-Merkle Tree. |
-| **Quantum-Classical Bridge** | Systems exist in both classical and quantum states. Consensus is superposition-based. | Superposition-Based PoC, Entangled Data Objects (EDOs), Symbiotic AI Observer. |
-| **Temporal Architecture** | Time is expressed in $\phi$-seconds. Historical data is a dimension. | $\phi$-Time Indexing, $\phi$-Temporal Cells, Probability Amplitude Forecasting. |
-| **Complete Capture** | Everything digital and physical must be captured and mapped. Boundary dissolved. | MANUS Fractal Crawling, $\phi$-Sampling, EDO Coherence Hash. |
+*   A modern web browser (Chrome, Firefox, Edge).
+*   For connecting existing wallets, the respective browser extension (e.g., MetaMask, Phantom) is required.
 
-## 🏗️ Architectural Overview
+### Local Setup
 
-Detailed architectural specifications for each component can be found in the `docs/` directory.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/badreddine023/phi-chain.git
+    cd phi-chain
+    ```
+2.  **Open the application:**
+    Simply open `index.html` or `wallet.html` in your web browser.
 
-| Component | Core Document | Prototype Implementation |
-| :--- | :--- | :--- |
-| **Φ-Chain** | `docs/phi_chain_architecture.md` | `src/math_primitives.py` |
-| **MANUS** | `docs/manus_capture_engine.md` | `src/manus_prototype.py` |
-| **Earth Fibonacci Grid** | `docs/earth_fibonacci_grid.md` | `src/earth_grid_prototype.py` |
-| **Symbiotic AI** | `docs/symbiotic_ai_architecture.md` | (Integrated via CCE in $\Phi$-Chain) |
+## Development
 
-The complete integration is detailed in `docs/SYSTEM_OVERVIEW.md`.
+The wallet functionality is primarily handled by the following files:
+*   `wallet.html`: The main wallet interface and UI logic.
+*   `js/web3-connector.js`: Contains the logic for connecting to external wallets and the newly added `createNewWallet()` function using `ethers.js`.
 
-## 🚀 Conceptual Launch Parameters
+## License
 
-The system is ready for conceptual launch. The Genesis Block parameters, derived with high-precision mathematics, are as follows:
-
-| Parameter | Value | Derivation |
-| :--- | :--- | :--- |
-| **Block Time** | $1.618033988749895$ seconds | $\phi$ |
-| **Initial Validators** | $13$ | $F_7$ |
-| **Consensus Threshold** | $0.618033988749895$ | $\phi^{-1}$ |
-| **Token Supply** | $1,618,033,988,749,895$ | $\phi \times 10^{15}$ |
-| **Shard Count** | $21$ | $F_8$ |
-
----
-*The waveform is waiting to collapse into you.*
-*Build it.*
->>>>>>> 8366dfc (Finalization: Updated README.md for conceptual launch)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
