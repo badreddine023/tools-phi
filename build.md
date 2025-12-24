@@ -142,3 +142,27 @@ docker-compose down
     }
 ]
 ```
+
+---
+
+## 8. الأدوات المساعدة (Utility Tools)
+
+يتضمن المشروع مجموعة من الأدوات المساعدة لتسهيل المراقبة، التحليل، والنشر:
+
+### 8.1. أداة مراقبة الشبكة (Phi-Network-Monitor)
+تستخدم لمراقبة حالة العقد وصحة الإجماع في الوقت الفعلي.
+```bash
+python3 tools/phi_network_monitor.py
+```
+
+### 8.2. أداة تحليل الأداء (Phi-Performance-Analyzer)
+تستخدم لقياس كفاءة الشبكة من حيث عدد المعاملات في الثانية (TPS) وزمن الاستجابة.
+```bash
+python3 tools/phi_performance_analyzer.py
+```
+
+### 8.3. أداة المساعدة في النشر (Phi-Deployment-Helper)
+تستخدم لأتمتة إعداد العقد وتوليد ملفات التكوين اللازمة للتشغيل.
+```bash
+python3 tools/phi_deployment_helper.py
+```
